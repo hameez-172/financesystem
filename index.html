@@ -175,11 +175,23 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.93 0-8.94 4.01-8.94 8.94a8.9 8.9 0 0 0 1.19 4.47L3 21l3.7-1.27a8.93 8.93 0 0 0 4.35 1.12h.01c4.93 0 8.94-4.01 8.94-8.94a8.87 8.87 0 0 0-2.4-5.59Zm-5.55 13.72a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.96.94-2.72-.18-.28a7.42 7.42 0 0 1-1.14-3.95c0-4.1 3.34-7.44 7.45-7.44a7.4 7.4 0 0 1 5.26 2.18 7.4 7.4 0 0 1 2.18 5.26c0 4.1-3.34 7.44-7.45 7.44a7.5 7.5 0 0 1-.22-.26Zm4.08-5.58c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.35.11.15 1.6 2.45 3.89 3.43.54.23.97.37 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.31-.53 1.5-1.05.18-.51.18-.95.13-1.05-.05-.09-.2-.15-.42-.26Z"/></svg>
         WhatsApp Me
       </a>
-      <a class="cta" href="mailto:hameez172@gmail.com?subject=System%20Build%20Inquiry">
-        Email Instead
+      <a class="cta" href="mailto:hameez172@gmail.com?subject=System%20Build%20Inquiry" onclick="copyEmailFallback()">
+        <span id="emailBtnText">Email Instead</span>
       </a>
     </div>
   </div>
+
+  <script>
+    function copyEmailFallback(){
+      var btnText = document.getElementById('emailBtnText');
+      if(navigator.clipboard){
+        navigator.clipboard.writeText('hameez172@gmail.com').then(function(){
+          btnText.textContent = 'Copied: hameez172@gmail.com';
+          setTimeout(function(){ btnText.textContent = 'Email Instead'; }, 2500);
+        });
+      }
+    }
+  </script>
 
   <div class="features">
     <div class="label mono">What the system handles</div>

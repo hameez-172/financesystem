@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vyntra — Business Management System for Medical Equipment Suppliers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0B1420;
+    --navy-800:#121F30;
+    --navy-700:#1B2C42;
+    --paper:#F5F3EC;
+    --amber:#D4A24E;
+    --amber-dark:#B3812F;
+    --ink:#151B22;
+    --ink-soft:#5B6472;
+    --line:#E3DFD3;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,.display{font-family:'Sora',sans-serif;color:var(--navy-900);margin:0;}
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;}
+
+  .wrap{max-width:960px;margin:0 auto;padding:64px 24px 80px;}
+
+  .nav{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Sora';font-weight:700;font-size:16px;color:var(--navy-900);
+    margin-bottom:48px;
+  }
+  .nav .dot{width:9px;height:9px;border-radius:2px;background:var(--amber);}
+
+  .eyebrow{
+    font-size:11px;font-weight:600;color:var(--amber-dark);
+    display:flex;align-items:center;gap:8px;margin-bottom:16px;
+  }
+  .eyebrow::before{content:'';width:20px;height:1px;background:var(--amber-dark);}
+
+  h1{font-size:38px;line-height:1.22;font-weight:800;letter-spacing:-0.01em;margin-bottom:14px;max-width:780px;}
+  h1 span{color:var(--amber-dark);}
+
+  .sub{font-size:17px;line-height:1.6;color:var(--ink-soft);max-width:620px;margin-bottom:36px;}
+
+  .player{
+    background:var(--navy-900);
+    border-radius:16px;
+    padding:8px;
+    box-shadow:0 30px 70px -24px rgba(11,20,32,0.45);
+    margin-bottom:28px;
+  }
+  .video-frame{
+    width:100%;
+    aspect-ratio:1280/712;
+    border-radius:10px;
+    overflow:hidden;
+    background:#000;
+    display:block;
+  }
+  video{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+    background:#000;
+  }
+
+  .meta-row{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:12px;margin-bottom:56px;
+  }
+  .meta-row .status{
+    display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-soft);
+  }
+  .meta-row .status::before{content:'';width:7px;height:7px;border-radius:50%;background:#3E9B5C;}
+
+  .cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--navy-900);color:var(--white);
+    font-size:13px;font-weight:600;
+    padding:11px 20px;border-radius:6px;text-decoration:none;
+  }
+
+  .features{
+    border-top:1px solid var(--line);
+    padding-top:36px;
+  }
+  .features .label{font-size:11px;font-weight:600;color:var(--ink-soft);margin-bottom:18px;}
+  .flist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .flist li{
+    display:flex;gap:12px;font-size:14px;color:var(--ink);line-height:1.5;
+  }
+  .flist li::before{
+    content:'';flex-shrink:0;width:16px;height:16px;margin-top:3px;
+    background:var(--paper);border:1.5px solid var(--amber-dark);border-radius:3px;
+  }
+
+  .stack{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:36px;
+  }
+  .pill{
+    font-size:12px;font-weight:600;color:var(--navy-800);
+    background:var(--white);border:1px solid var(--line);
+    padding:6px 12px;border-radius:5px;
+  }
+
+  footer{
+    margin-top:56px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-soft);
+  }
+
+  @media(max-width:520px){
+    .wrap{padding:40px 18px 60px;}
+    h1{font-size:27px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="nav"><span class="dot"></span>Vyntra — Systems &amp; Automation</div>
+
+  <div class="eyebrow mono">Client Project — Live Demo</div>
+  <h1>Spreadsheets and paper invoices ran this business. <span>Now a system does.</span></h1>
+  <p class="sub">A complete business management system built for a diagnostics and medical equipment supplier — replacing manual tracking with one reliable, purpose-built tool.</p>
+
+  <div class="player">
+    <div class="video-frame">
+      <video controls playsinline preload="metadata">
+        <source src="demo.mp4" type="video/mp4">
+        Your browser doesn't support embedded video — <a href="demo.mp4" style="color:#fff;">download it here</a> instead.
+      </video>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="status">Real client system — in active use</div>
+    <a class="cta" href="mailto:you@example.com?subject=System%20Build%20Inquiry">Want something like this built? →</a>
+  </div>
+
+  <div class="features">
+    <div class="label mono">What the system handles</div>
+    <ul class="flist">
+      <li>Every deal tracked in one place — client, equipment, specs, status</li>
+      <li>Invoices, quotations, and delivery challans generated as PDFs in seconds</li>
+      <li>Client credit and debit balances tracked automatically, no manual reconciliation</li>
+      <li>Expense tracking and business analytics — visibility the business never had before</li>
+    </ul>
+  </div>
+
+  <div class="stack">
+    <span class="pill">Python</span>
+    <span class="pill">Streamlit</span>
+    <span class="pill">SQLite</span>
+    <span class="pill">Business Automation</span>
+  </div>
+
+  <footer>
+    Built by Vyntra — systems designed around how a business actually works, not a template forced onto it.
+  </footer>
+
+</div>
+</body>
+</html>
